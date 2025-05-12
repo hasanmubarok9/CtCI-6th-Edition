@@ -1,4 +1,5 @@
 'use strict';
+const util = require('util');
 
 // import { Tree } from './helpers';
 
@@ -24,7 +25,7 @@ class Tree {
       let n = this.root,
         branch;
       while (n) {
-        // console.log("di dalam while, nilai n: ", n);
+        console.log("di dalam while, nilai n: ", util.inspect(n, { showHidden: false, depth: 2, colors: true }));
         branch = value < n.val ? 'left' : 'right';
         console.log("di dalam while, nilai branch: ", branch, ", dan nilai n[branch]: ", n[branch]);
         if (!n[branch]) {
